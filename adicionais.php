@@ -129,7 +129,7 @@
           </label>
         </div>
         <br>
-        <label class="total">TOTAL </label>&nbsp;  <label class="total">R$</label><input class="valorfinal" type="text" id="valororcamento1" value=""  disabled>
+        <label class="total">TOTAL </label>&nbsp;  <label class="total">R$ </label><input class="valorfinal" type="text" id="valororcamento1" value=""  disabled>
 
        
       </form> 
@@ -151,11 +151,11 @@
 <script>
   function confirmar() 
   {
-    location.href="http://127.0.0.1:5500/formapagamento.html"
+    location.href="http://localhost/trailermarine2/formapagamento.html"
   }
   function voltar() 
   {
-    location.href="http://127.0.0.1:5500/pacotes.html"
+    location.href="http://localhost/trailermarine2/pacotes.html"
   }
   var soma1 = 30000
 var soma2 = 0

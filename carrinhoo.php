@@ -102,7 +102,7 @@ $items = array(
 
         <h2 class="title"> Carrinho:</h2>
 
-        <?php include('carrinhoo2.php'); ?>
+        <?php include('carrinho2.php'); ?>
     </body>
 </html>
 

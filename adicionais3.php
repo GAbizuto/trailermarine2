@@ -152,7 +152,7 @@
 <script>
 function confirmar() 
 {
-  location.href="http://127.0.0.1:5500/formapagamento.html"
+  location.href="http://localhost/trailermarine2/formapagamento.html"
 }
 function voltar() 
 {
