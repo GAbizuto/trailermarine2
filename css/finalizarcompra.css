@@ -12,23 +12,17 @@ body{
     background-position: center ;
     background-size: 130%;
     overflow-x: hidden;
-    background-color: rgb(150, 221, 221);   
-}
-.container {
-  width: 80%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
+    background-color: rgb(150, 221, 221);
+
+    
+
+    
 }
  header
  {
     width: 100%;
     height: 8vh ;
-    background-color:rgba(15, 48, 56, 0.856);
+    background-color:rgba(15, 48, 56, 0.726);
     display:flex;
     padding: 20px;
     color: rgb(224, 242, 245);
@@ -67,17 +61,19 @@ h2{
     justify-content: center;
     flex: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 h3{
     font-size: 2.5rem;
     padding: 0%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
     display: flex;
-    align-items: start;
-    align-content: start;
-    justify-content:start;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     flex: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .icone{
  text-decoration: none;
@@ -127,42 +123,42 @@ cursor: pointer;
 
 
 .caixona{
-    width: 50%;
-    height: 80%;
+    width: 800px;
+    height: 500px;
     display: flex;
-    padding-top: 10px;
+    padding-top: 40px;
     justify-content: flex-start;
     align-items: left;
-    background-color: rgba(15, 48, 56, 0.856);
+    background-color: rgba(15, 48, 56, 0.726);
     flex-direction: column;
     border-radius: 10px;
     padding:0px;
-   
+    Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
+    
   
     
 
 }
-    .main{
+    .minicaixa{
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column;
-       background-color: 0;
-        justify-items: start;
-        align-items: start;
-        align-content: start;
-        padding: 70px;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
       
        
     }
 .dados{
-    width: 100%;
-    height: 100%;
+    width: 280px;
+    height: 280px;
     align-items: center;
     display: flex;
     align-content: center;
     justify-content: space-around;
-    --bg: #4699c9;
+    --bg: #4699c99f;
     --text-color: #130404;
     position: relative;
     
@@ -179,8 +175,12 @@ cursor: pointer;
    
     cursor: pointer;
   }
-
   
+  button:hover {
+    background-color:  #3faae7 ;
+    height: 300px;
+    width: 300px;
+  }
   
   button:active {
     top: 4px;
@@ -296,6 +296,7 @@ a{
  #menuToggle span:nth-last-child(2)
  {
    transform-origin: 0% 100%;
+   
  }
  
  /* 
@@ -333,12 +334,13 @@ a{
  #menu
  {
    position: absolute;
-   width: 300px;
+   width: 200px;
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
-   
-   background:  rgb(21, 32, 65);
+  
+    border-radius:10px ;
+   background:rgba(15, 48, 56, 0.818);
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
@@ -353,6 +355,7 @@ a{
  {
    padding: 10px 0;
    font-size: 22px;
+   
  }
  
  /*
@@ -361,67 +364,13 @@ a{
  #menuToggle input:checked ~ ul
  {
    transform: none;
+   Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
  }
  
     
-.checkout-button{
-  position: relative;
-  
-
-  width: 100px;
-    height: 2rem;
-    border-radius: 10%;
-   border: 0px;
-  background-color: rgb(81, 200, 216);
-}
-.total{
-  color: aliceblue;
-  width: 100%;
-  height: 100%;
-  font-size: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.p{
-  font-family: 'Monaco';
-  text-align: start;
-}
-.item{
-  background-color:rgb(81, 200, 216); 
-  width: 500%;
-  padding: 10px;
-  text-align: start;
-  border: solid rgb(6, 44, 48);
-  border-radius: 20px ;
- 
-}
-.item-details
-{
-  text-align: start;
+.rodapé{
+    background-color: rgb(21, 32, 65);
+    width: 100%;
+    height: 10%;
 }
 
-  
-    .item:hover{
-      background-color: rgb(10, 82, 90); 
-    }
-
-    .checkout-button2{
-      position: relative;
-       width: 100px;
-      height: 3rem;
-      border-radius: 10%;
-      border: 0px;
-     background-color: rgb(81, 200, 216);
-     box-shadow: solid black 20px;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     color:  rgb(21, 32, 65);
-   transition:0.9s;
-   cursor: pointer;
-    }
-
-
-    .checkout-button2:hover{
-      background-color: aqua;
-      width: 120px;
-      height: 3.3rem;
-    }
-  

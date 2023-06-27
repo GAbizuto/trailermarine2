@@ -61,14 +61,15 @@
     <div class="voltar"> 
       <button onclick="voltar();" class="botao"><img src="imagens/back.png" width="48px" height="48px"></button>
     </div>
-    <div class="selecionado"> Pacote selecionado:      BALI </div>
+    <div class="selecionado"> Pacote selecionado:      CARIBE </div>
   </div>
   <br><br>
 
 
   <div class="container">
     <br> <br>
-    <div class="infopacote"><img src="imagens/pacote1.avif" width="200px"
+
+    <div class="infopacote"><img src="imagens/pacote3.jfif" width="200px"
       height="200px">&nbsp;&nbsp;<div class="texto">Outras classes
         Observe que, no print a scrollbar é simples, porém a formatação do CSS é versátil e útil. Além disso, existem outras classes que também podem ser úteis:
         <br>
@@ -86,99 +87,99 @@
     </div>
   
     <fieldset>
-        <br>
-        <div class="a1">
-          <form action="" name="formulario" onchange="calcularValores()">
-          <label class="container2">
-           
-            <input type="checkbox" name="check" id="check1" value="200" onchange="somar(this)"/>
-            Comidas - R$ 200,00
-            <div class="checkmark"></div>
-          </label>
-        </div>
-        <br>
-        <div class="a1">
-          <label class="container2">
-            <input type="checkbox" name="check"  id="check2" value="350" onchange="somar(this)"/>
-            Bebidas - R$ 350,00
-            <div class="checkmark"></div>
-          </label>
-        </div>
-        <br>
-        <div class="a1">
-          <label class="container2">
-            <input type="checkbox" name="check"  id="check3" value="100" onchange="somar(this)"/>
-            Roupa de cama - R$ 100,00
-            <div class="checkmark"></div>
-          </label>
-        </div>
-        <br>
-        <div class="a1">
-          <label class="container2">
-            <input type="checkbox" name="check"  id="check4" value="100" onchange="somar(this)"/>
-            Toalhas de banho - R$ 100,00
-            <div class="checkmark"></div>
-          </label>
-        </div>
-        <br>
-        <div class="a1">
-          <label class="container2">
-            <input type="checkbox" name="check"  id="check5" value="100" onchange="somar(this)" />
-            Itens Higiene - R$ 100,00
-            <div class="checkmark"></div>
-          </label>
-        </div>
-        <br>
-        <label class="total">TOTAL </label>&nbsp;  <label class="total">R$ </label><input class="valorfinal" type="text" id="valororcamento1" value=""  disabled>
+      <br>
+      <div class="a1">
+        <form action="" name="formulario" onchange="calcularValores()">
+        <label class="container2">
+         
+          <input type="checkbox" name="check" id="check1" value="200" onchange="somar(this)"/>
+          Comidas - R$ 200,00
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      <br>
+      <div class="a1">
+        <label class="container2">
+          <input type="checkbox" name="check"  id="check2" value="350" onchange="somar(this)"/>
+          Bebidas - R$ 350,00
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      <br>
+      <div class="a1">
+        <label class="container2">
+          <input type="checkbox" name="check"  id="check3" value="100" onchange="somar(this)"/>
+          Roupa de cama - R$ 100,00
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      <br>
+      <div class="a1">
+        <label class="container2">
+          <input type="checkbox" name="check"  id="check4" value="100" onchange="somar(this)"/>
+          Toalhas de banho - R$ 100,00
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      <br>
+      <div class="a1">
+        <label class="container2">
+          <input type="checkbox" name="check"  id="check5" value="100" onchange="somar(this)" />
+          Itens Higiene - R$ 100,00
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      <br>
+      <label class="total">TOTAL </label>&nbsp;  <label class="total">R$</label><input class="valorfinal" type="text" id="valororcamento1" value=""  disabled>
 
-       
-      </form> 
-        <br>
-        <div class="confirma">
-          CONFIRMAR:
-          <button onclick="confirmar();" class="confirmar">
-            <img src="imagens/send.png">
+     
+    </form> 
+      <br>
+      <div class="confirma">
+        CONFIRMAR:
+        <button onclick="confirmar();" class="confirmar">
+          <img src="imagens/send.png">
 
-          </button>
-        </div>
-    </fieldset>
-    
-  </div>
-
-
+        </button>
+      </div>
+  </fieldset>
   
+</div>
+
+
+
 </body>
 <script>
-  function confirmar() 
-  {
-    location.href="http://127.0.0.1:5500/finalizarcompra.html"
-  }
-  function voltar() 
-  {
-    location.href="http://127.0.0.1:5500/pacotes.html"
-  }
-  var soma1 = 30000
+function confirmar() 
+{
+  location.href="http://localhost/trailermarine2/formapagamento.html"
+}
+function voltar() 
+{
+  location.href="http://127.0.0.1:5500/pacotes.html"
+}
+var soma1 = 55000
 var soma2 = 0
 
 function somar(check)
-  {
-  if ( check.checked ) soma1 += 1*check.value;
-    else               soma1 -= 1*check.value;
+{
+if ( check.checked ) soma1 += 1*check.value;
+  else               soma1 -= 1*check.value;
 
-  document.getElementById("valororcamento1").value = soma1
-  }
+document.getElementById("valororcamento1").value = soma1
+}
 
 function calcularValores()
+{
+soma2 = 0 
+for (var i=1; i<=7; i++)
   {
-  soma2 = 0 
-  for (var i=1; i<=7; i++)
-    {
-    var check = document.getElementById("check"+i)
-    if ( check.checked ) soma2 += 1*check.value;
-    }
-
-  document.getElementById("valororcamento2").value = soma2
+  var check = document.getElementById("check"+i)
+  if ( check.checked ) soma2 += 1*check.value;
   }
+
+document.getElementById("valororcamento2").value = soma2
+}
 
 
 </script>
