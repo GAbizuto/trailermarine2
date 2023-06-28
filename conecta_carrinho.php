@@ -13,6 +13,6 @@
         Preço: R$' .number_format($produto['preco'],2,",","."). '<br>';
         echo '<a href="carrinhao.php?add=carrinho&id=' .$produto['id']. '">Adicionar ao carrinho</a><br/>';
 
-    };
+    }; 
 
 ?>
