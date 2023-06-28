@@ -8,6 +8,7 @@
     $comando = $pdo->prepare("SELECT * FROM  usuario_data WHERE email = :email and senha = :senha ");
     $comando->bindParam(':email', $email);
     $comando->bindParam(':senha', $senha);
+   
     $resultado = $comando->execute();
 
     if($resultado === TRUE)
@@ -24,6 +25,7 @@
         $telefone= $linhas["telefone"];
         $cpf = $linhas["cpf"];
         $admin = $linhas ["admin"];
+        
     }
 
     if($n == 0)
