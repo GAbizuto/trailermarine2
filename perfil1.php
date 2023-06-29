@@ -1,26 +1,45 @@
-<?php
-  session_start();
-  $email = $_SESSION['email'];
-  $nome = $_SESSION['nome'];
-  $senha = $_SESSION['senha'];
-  $telefone = $_SESSION['telefone'];
-  $cpf = $_SESSION ['cpf'];
+<?php session_start(); 
+$email = $_SESSION['email']; 
+$nome = $_SESSION['nome']; 
+$senha = $_SESSION['senha']; 
+$telefone = $_SESSION['telefone']; 
+$cpf = $_SESSION['cpf'];
+
+ // Verifica se o formulário foi enviado 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ // Verifica se um arquivo foi enviado 
+if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) { 
+// Conecta ao banco de dados 
+include("conecta.php");
+
+ 
+// Obtém os dados da imagem 
+$foto = file_get_contents($_FILES['imagem']['tmp_name']);
+ // Atualiza a foto do usuário no banco de dados 
+$comando = $pdo->prepare("UPDATE usuario_data SET foto = :foto WHERE email = :email"); 
+$comando->bindParam(':foto', $foto, PDO::PARAM_LOB); $comando->bindParam(':email', $email); $resultado = $comando->execute(); 
+
+
+if ($resultado) {
+ echo "Imagem salva com sucesso!";
+ 	} else { 
+echo "Erro ao salvar a imagem."; 
+}
+} 
+} 
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfil</title>
-    <link rel="stylesheet" href="css/perfil.css">
-    <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
-</head>
+
+ <!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>perfil</title> <link rel="stylesheet" href="css/perfil.css"> <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'> 
+
+</head> 
 
 <body>
-   
 
-            <header>
+
+
+
+
+ <header>
                 <nav role="navigation">
                     <div id="menuToggle">
                       <!--
@@ -75,23 +94,19 @@
 <div class="caixona"> 
   <div class="perfil">
     <div class="esquerdadiv">
-        <div class="fotop"> 
-          <?php 
-          
-          $i = base64_encode($dados_imagem);
+<div class="fotop"> <?php // Exibe a foto do usuário, se existir 
+if (!empty($foto)) { 
+echo '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '">'; } ?> 
+</div> 
+<form action="perfil.php" method="post" enctype="multipart/form-data" class="formulas"> 
+<label for="selecao-arquivo">Selecionar um arquivo &#187; 
+<input id="selecao-arquivo" type="file" class="file" id="imagem" name="imagem"> 
+</label><br><br> 
+<input type="submit" value="Enviar" class="submit"> 
+</form>
 
-          
-          if(isset($imagem)){
-             echo(" <img src='data:image/jpeg;base64,$i' width='100px'> <br> <br> ");
-          }
 
-          ?>
-        </div>
-        <form action="salvar_imagem.php" method="post" enctype="multipart/form-data" class="formulas"><label for='selecao-arquivo'>Selecionar um arquivo &#187;<input id='selecao-arquivo' type='file' class="file"id="imagem" name="imagem"></label><br><br><input type="submit" value="Enviar" class="submit">
-     
-        
-       
-        <h3>Usuário</h3>
+ <h3>Usuário</h3>
         <p>0 Compras em nosso site</p>
         <p>2 Produtos no Carrinho</p>
     </div>
@@ -123,3 +138,5 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
 </html>
+
+

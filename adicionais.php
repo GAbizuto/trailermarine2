@@ -151,7 +151,13 @@
 <script>
   function confirmar() 
   {
-    location.href="http://localhost/trailermarine2/formapagamento.html"
+    location.href="http://localhost/trailermarine2/pacotes.html"
+
+    <?php
+
+        echo '<a href="carrinhao.php?add=carrinho&id=' .$produto['id']. 
+
+    ?>
   }
   function voltar() 
   {
