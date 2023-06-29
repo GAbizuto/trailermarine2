@@ -9,7 +9,7 @@ body
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url("../imagens/fundo.jpg");
+    background-image: url("../imagens/fundozao.jpg");
     background-position: center ;
     background-size: 130%;
     overflow: hidden;
@@ -19,7 +19,7 @@ header
 {
   width: 100%;
   height: 8vh ;
-  background-color:rgb(21, 32, 65);
+  background-color:rgba(15, 48, 56, 0.726);
   display:flex;
   padding: 20px;
   color: rgb(224, 242, 245);
@@ -79,13 +79,14 @@ a{
     width: 550px;
     height: 550px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color: rgb(21, 32, 65);
+    background-color: rgba(15, 48, 56, 0.726);
     flex-direction: column;
     border-radius: 50%;
     color: #96DDDD;
-    font-family: 'bayon'; font-size: 40px
+    font-family: 'bayon'; font-size: 40px;
+    Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
 }
 .escritas
 {
@@ -107,8 +108,8 @@ a{
   text-decoration: underline;
   display: flex;
   z-index: 10;
-  padding-top: 15px;
   flex-direction: column;
+  font-size: 30px;
 }
 .periscopio
 {
@@ -232,12 +233,12 @@ a{
  #menu
  {
    position: absolute;
-   width: 300px;
+   width: 200px;
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
-   
-   background:  rgb(21, 32, 65);
+   border-radius: 9px;
+   background: rgba(15, 48, 56, 0.726);
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
@@ -260,4 +261,10 @@ a{
  #menuToggle input:checked ~ ul
  {
    transform: none;
+   Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
+  
+ }
+ .gol{
+  text-decoration: none;
+ 
  }

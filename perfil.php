@@ -86,7 +86,7 @@
               <br><br>
               E-mail: <?php echo $email; ?>
               <br><br>
-              cpf: <?php echo $senha; ?>
+              cpf: <?php echo $cpf; ?>
               <br> <br>
 
             </h3>

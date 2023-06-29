@@ -60,7 +60,8 @@ h1{
 
 .container
 {
-  width: 80%;
+ margin-top: 20px;
+  width: 60%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -69,6 +70,8 @@ h1{
   align-content: center;
   align-items: center;
   background: none;
+  background-color: rgba(15, 48, 56, 0.726);
+  border-radius: 10px;
 }
 
 h2{
@@ -80,7 +83,7 @@ h2{
     justify-content: center;
     flex: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: aliceblue;
+   color: white;
     
 }
 
