@@ -123,135 +123,56 @@ cursor: pointer;
 }
 
 
+
 .caixona{
-   max-width:100%;
-   max-height:100%;
-   height: 80%;
-   width: 100%;
-   
-    padding-top: 40px;
-
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-  
-  
-  
-    
-    margin: 0%;
-    Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
- }
-    
-  
-    
-
-
- .perfil{
-  width: 80%;
-  height: 70vh;
+  width: 600px;
+  height: 500px;
   display: flex;
+  padding-top: 40px;
+  justify-content: flex-start;
+  align-items: left;
   background-color:rgba(15, 48, 56, 0.818);
-  border-radius: 25px;
-}
-.esquerdadiv{
-  width: 30%;
-  margin: 3%;
-  padding: 2%;
-  height: auto;
-  background-color:rgba(15, 48, 56, 0.818);
-  border-radius: 20px;
-  align-items: center;
-  align-content: center;
-  display: flex;
   flex-direction: column;
-}
-
-.direitadiv{
-  width: 60%;
-  margin: 3%;
-  padding: 2%;
-  height: auto;
-  background-color: rgb(237, 237, 237);
-  border-radius: 20px;
-  align-items: center;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.fotop{
-  background-image: url("perfil.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
-  cursor: pointer;
-  border: 1px solid rgb(197, 197, 197);
-}
-.esquerdadiv button{
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  border-radius: 35px;
-  border: 1px solid rgb(197, 197, 197);
-  margin-top: -30px;
-}
-button i{
-  color: #000 
-}
-
-.inputzperfil{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 50px;
+  margin: 0%;
+  Box-decoration-break: slice;-webkit-box-decoration-break: slice;box-shadow: 8px 8px 10px 0 #131414, -5px -5px 5px 0 rgb(18, 34, 37), 5px 5px 15px 0 rgb(35, 57, 59);
   
-}
-.tablep{
-  border: 1px solid rgb(197, 197, 197);
-  width: 80%;
-  height: 70px;
-  margin: 2%;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 20px;
-  align-items: center;
-  justify-content: space-around;
-}
 
-.tablep input{
-  width: 50%;
-  background: transparent;
-  border: 1px solid rgb(255, 255, 255);
-  height: 25px;
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 17px;
-}
+  
 
-h3{
-  font-size: 30px;
-  color: rgb(41, 163, 211);
-  font-weight: 400;
 }
-
-p{
-  font-size: 17px;
-  color: rgb(255, 255, 255);
-  font-weight: 400;
-}
+  .minicaixa{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      justify-items: left;
+      align-items: left;
+      align-content: left;
+      text-align: left;
     
+     
+  }
+  h3{
+      width: 100%;
+      font-size: 2rem;
+      padding: 0%;
+      color: rgb(81, 200, 216);
+      display: flex;
+      align-items: left;
+      text-align: left;
+  }
 .voltar{
-   height: 10%;
-   width: 10%;
-   background: none;
-   border: 0cm;
-   cursor: pointer;
+ height: 10%;
+ width: 10%;
+ background: none;
+ border: 0cm;
+ cursor: pointer;
 }
+
 
 
 /* Esconde o input */

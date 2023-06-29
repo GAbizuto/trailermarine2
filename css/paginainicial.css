@@ -12,6 +12,7 @@ body{
     background-size: 100%;
     overflow-x: hidden;
     align-content: center;
+    background-color: rgb(6, 33, 42) ;
 }
 
 
@@ -216,9 +217,14 @@ cursor: pointer;
     font-size: 25px;
     font-family: 'Bayon';
     margin: 0%;
-    
+    text-align: center;
     justify-content: space-between ;
-    
+    align-items: center;
+    justify-content: center; 
+}
+.link{
+  color: white;
+ text-decoration: none;
 }
 button:hover {
   background-color:  #ffffff ;
@@ -393,6 +399,9 @@ button:hover {
     
 }
 
+
+
+
 .fora
 {
     width: 70%;
@@ -413,7 +422,7 @@ button:hover {
 .imagem
 {
     position: absolute; 
-    top:-10%;
+    top: 0px;
     left:0px;
 
 }
@@ -427,6 +436,7 @@ button:hover {
   justify-content: center;
   justify-items: center;
   border-radius: 5px;
+  left: 50px;
   
 }
 .sobre{
